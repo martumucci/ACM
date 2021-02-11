@@ -1,0 +1,9 @@
+﻿Objects are Reference Types, meaning they hold a reference to the data, not the data itself. 
+
+The Static modifier declares a member that belongs to the class itself instead of to an object of it. You can access the static member with the class name
+
+Layering the Application: 
+	- User Interface
+	- Business Logic
+	- Data Access
+	- Common Library

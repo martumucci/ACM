@@ -8,6 +8,15 @@ namespace ACM.BL
 {
     public class Customer
     {
+        public Customer()
+        {
+              
+        }
+
+        public Customer(int customerId)
+        {
+            CustomerId = customerId;
+        }
         public int CustomerId { get; private set; } // propg snippet
         public string EmailAddress { get; set; } // prop snippet
         public string FullName
@@ -34,5 +43,56 @@ namespace ACM.BL
                 _LastName = value;
             }
         }
+
+        public static int InstanceCount { get; set; } // Static member, belongs to the class itself
+
+        /// <summary>
+        /// Retrieve one customer
+        /// </summary>
+        /// <param name="customerId"></param>
+        /// <returns></returns>
+        public Customer Retrieve(int customerId)
+        { 
+            //...
+
+            return new Customer();
+        }
+
+        /// <summary>
+        /// Retrieve all customers
+        /// </summary>
+        /// <returns></returns>
+        public List<Customer> Retrieve()
+        {
+            // ...
+
+            return new List<Customer>();
+        }
+
+        /// <summary>
+        /// Saves the current Customer
+        /// </summary>
+        /// <returns></returns>
+        public bool Save()
+        {
+            // ...
+
+            return true;
+        }
+
+        /// <summary>
+        /// Validates customer data
+        /// </summary>
+        /// <returns></returns>
+        public bool Validate()
+        {
+            var isValid = true;
+
+            if (string.IsNullOrWhiteSpace(LastName)) isValid = false;
+            if (string.IsNullOrWhiteSpace(EmailAddress)) isValid = false;
+
+            return isValid;
+        }
+
     }
 }

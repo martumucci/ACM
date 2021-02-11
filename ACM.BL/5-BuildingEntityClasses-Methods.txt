@@ -1,0 +1,14 @@
+﻿- (Method/Function) Signature: the signature of a method its comprised of its name and the type of each of its formal parameters.
+								It does not include the return type. Each methods signature in a class must be unique.
+
+- Overloading : is used to describe methods that have the same name but different parameters. Since overloaded members have the same name, 
+				they should provide variations of the same functionality. 
+
+- Contract : the properties and methods declared with a public access modifier comprise the class contract (the class makes a promise that it will
+			provide the defined properties and methods to any other code in the application that needs them). 
+			Over time the code can extend the contract by adding new properties and methods, but it should not remove any or modify a methods 
+			signature once a class has been deployed to production. This contract is also called a class interface.
+
+- Class Constructor : it is basically a special kind of method named with a class name that is excecuted each time an instance of the class is 
+					created. They are defined at the top of the class. A constructor with no parameters is referred to as a default constructor.
+					An implicit default constructor is defined automatically.
