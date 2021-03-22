@@ -41,15 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Address.cs" />
     <Compile Include="Customer.cs" />
+    <Compile Include="CustomerRepository.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="OrderItem.cs" />
+    <Compile Include="OrderRepository.cs" />
     <Compile Include="Product.cs" />
+    <Compile Include="ProductRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="4-BuildingEntityClasses.txt" />
-    <Content Include="5-BuildingEntityClasses-Methods.txt" />
+    <Content Include="Notes\4-BuildingEntityClasses.txt" />
+    <Content Include="Notes\5-BuildingEntityClasses-Methods.txt" />
+    <Content Include="Notes\6-SeparationOfResponsibilities.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

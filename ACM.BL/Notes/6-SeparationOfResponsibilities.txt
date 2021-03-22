@@ -1,0 +1,10 @@
+﻿- Separating Responsibilities: look at each classes and determine wether it is focused or taking on too much responsibility.
+
+- By convention, a class responsible for retrieving and saving the data for an entity is called a repository class.
+
+- Cupling: to what degree are classes dependent on other classes or external resources. To reduce coupling, extract dependencies 
+	into their own classes, to make an application easy to test and maintain.
+
+- Cohesion: how related the members of a class are to the class purpose. To increase cohesion, extract unrelated members into their
+	own classes, to make an application easier to understand, test and maintain.
+

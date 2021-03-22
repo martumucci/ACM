@@ -58,27 +58,28 @@ namespace ACM.BL
             return new Customer();
         }
 
-        /// <summary>
-        /// Retrieve all customers
-        /// </summary>
-        /// <returns></returns>
-        public List<Customer> Retrieve()
-        {
-            // ...
+        // Retrieve and Save methods are now in the repository
+        ///// <summary>
+        ///// Retrieve all customers
+        ///// </summary>
+        ///// <returns></returns>
+        //public List<Customer> Retrieve()
+        //{
+        //    // ...
 
-            return new List<Customer>();
-        }
+        //    return new List<Customer>();
+        //}
 
-        /// <summary>
-        /// Saves the current Customer
-        /// </summary>
-        /// <returns></returns>
-        public bool Save()
-        {
-            // ...
+        ///// <summary>
+        ///// Saves the current Customer
+        ///// </summary>
+        ///// <returns></returns>
+        //public bool Save()
+        //{
+        //    // ...
 
-            return true;
-        }
+        //    return true;
+        //}
 
         /// <summary>
         /// Validates customer data
