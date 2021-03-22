@@ -8,7 +8,7 @@ namespace ACM.BL
 {
     public class Customer
     {
-        public Customer()
+        public Customer(): this(0) // constructor chaining to provide default customer id
         {
               
         }
@@ -16,8 +16,11 @@ namespace ACM.BL
         public Customer(int customerId)
         {
             CustomerId = customerId;
+            AddressList = new List<Address>();
         }
+        public List<Address> AddressList { get; set; }
         public int CustomerId { get; private set; } // propg snippet
+        public int CustomerType { get; set; }
         public string EmailAddress { get; set; } // prop snippet
         public string FullName
         {
@@ -58,28 +61,6 @@ namespace ACM.BL
             return new Customer();
         }
 
-        // Retrieve and Save methods are now in the repository
-        ///// <summary>
-        ///// Retrieve all customers
-        ///// </summary>
-        ///// <returns></returns>
-        //public List<Customer> Retrieve()
-        //{
-        //    // ...
-
-        //    return new List<Customer>();
-        //}
-
-        ///// <summary>
-        ///// Saves the current Customer
-        ///// </summary>
-        ///// <returns></returns>
-        //public bool Save()
-        //{
-        //    // ...
-
-        //    return true;
-        //}
 
         /// <summary>
         /// Validates customer data
