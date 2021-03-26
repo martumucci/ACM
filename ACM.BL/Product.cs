@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Acme.Common;
 
 namespace ACM.BL
 {
-    public class Product
+    public class Product : EntityBase, ILoggable
     {
         public Product()
         {
@@ -18,16 +14,32 @@ namespace ACM.BL
             ProductId = productId;
         }
 
-        public string ProductName { get; set; }
         public string ProductDescription { get; set; }
         public decimal? CurrentPrice { get; set; }
         public int ProductId { get; private set; }
+
+        private string _productName;
+        public string ProductName
+        {
+            get
+            {
+                return _productName.InsertSpaces();
+            }
+            set
+            {
+                _productName = value;
+            }
+        }
+
+        public string Log() => $"{ProductId}: {ProductName} Detail: {ProductDescription} Status: {EntityState.ToString()}";
+
+        public override string ToString() => ProductName;
 
         /// <summary>
         /// Validates the Product
         /// </summary>
         /// <returns></returns>
-        public bool Validate()
+        public override bool Validate()
         {
             var isValid = true;
 

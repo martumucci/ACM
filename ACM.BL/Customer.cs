@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Acme.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ACM.BL
 {
-    public class Customer
+    public class Customer : EntityBase, ILoggable
     {
         public Customer(): this(0) // constructor chaining to provide default customer id
         {
@@ -49,6 +50,19 @@ namespace ACM.BL
 
         public static int InstanceCount { get; set; } // Static member, belongs to the class itself
 
+        //public string Log()
+        //{
+        //    var logString = CustomerId + ": " 
+        //                    + FullName + " " 
+        //                    + "Email: " + EmailAddress + " " 
+        //                    + "Status: " + EntityState.ToString();
+        //    return logString;
+        //}
+
+        public string Log() => $"{CustomerId}: {FullName} Email: {EmailAddress} Status: {EntityState.ToString()}";
+
+        public override string ToString() => FullName;
+
         /// <summary>
         /// Retrieve one customer
         /// </summary>
@@ -66,7 +80,7 @@ namespace ACM.BL
         /// Validates customer data
         /// </summary>
         /// <returns></returns>
-        public bool Validate()
+        public override bool Validate()
         {
             var isValid = true;
 
